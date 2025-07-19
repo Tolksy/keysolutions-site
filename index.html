@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exterior Home Boost | Key Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #1f3a60;
+      --accent: #f5a623;
+      --bg: #f8f9fa;
+      --text: #222;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0.5rem auto 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #e69510;
+    }
+
+    .proof-section, .services, .form-section {
+      margin-top: 3rem;
+    }
+
+    .services ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .form-section {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea, select {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Key Solutions</h1>
+    <p>Exterior Home Boost | Total Property Care</p>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Make Your Property Shine — and Protect Its Value</h2>
+      <p>Small exterior issues can turn into big costs. But with a little care today, you can boost your home’s value, curb appeal, and longevity. We handle everything outside your home — from pressure washing and painting to full cleanups, carpentry, and more.</p>
+      <p>We’ve helped property owners across Vancouver Island clean up, fix up, and save thousands in future repairs — while making their home look 10x better.</p>
+      <button class="btn-primary" onclick="document.getElementById('lead-form').scrollIntoView({behavior: 'smooth'})">
+        Show Me My Best Option
+      </button>
+    </section>
+
+    <section class="proof-section">
+      <h3>What Your Neighbors Are Already Doing</h3>
+      <p>✔ Pressure washing away years of grime<br/>
+         ✔ Painting trim & siding for instant curb appeal<br/>
+         ✔ Fixing small rot before it becomes structural<br/>
+         ✔ Clearing out junk, moss, and buildup<br/>
+         ✔ Getting clarity — not confusion — about what to fix first</p>
+    </section>
+
+    <section class="services">
+      <h3>Everything Outside. All in One Call.</h3>
+      <ul>
+        <li>Exterior Painting</li>
+        <li>Pressure Washing & Moss Removal</li>
+        <li>Decks, Railings, Fences & Siding Repairs</li>
+        <li>Junk Removal & Hauling</li>
+        <li>Gutter Cleaning & Trim Work</li>
+        <li>Project Consulting & Budgeting</li>
+      </ul>
+    </section>
+
+    <section class="form-section" id="lead-form">
+      <h3>You’ll Walk Away Knowing What Your Best Option Is</h3>
+      <p>Tell us a bit about your property. We’ll review it and contact you with your best next move — whether it's cleanup, repair, or just leaving it alone for now. No pressure. Just clarity.</p>
+
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name*" required />
+        <input type="text" name="location" placeholder="Your Location*" required />
+        <input type="text" name="contact" placeholder="Phone or Email*" required />
+        <textarea name="details" placeholder="What’s going on with your property?*" rows="4" required></textarea>
+        <select name="contactMethod">
+          <option value="">Preferred contact method</option>
+          <option value="Phone">Phone</option>
+          <option value="Email">Email</option>
+        </select>
+        <button type="submit" class="btn-primary">Tell Me My Best Option</button>
+      </form>
+    </section>
+
+    <footer>
+      © 2025 Key Solutions | Exterior Home Boost. All Rights Reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thanks! We’ll be in touch with your best option shortly.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
